@@ -5,28 +5,19 @@
 //  Created by Dalton Hinterscher on 2/12/25.
 //
 
+import RecipesUI
 import SwiftUI
 import SwiftData
 
 @main
 struct recipes_fetchApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
+    
+    private let appComponent = AppComponent()
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            appComponent.recipesScreen()
         }
-        .modelContainer(sharedModelContainer)
+        .environmentObject(appComponent.remoteImageDownloader)
     }
 }

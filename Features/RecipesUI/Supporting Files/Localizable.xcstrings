@@ -1,0 +1,31 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%@ (%lld)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ (%2$lld)"
+          }
+        }
+      }
+    },
+    "An error occurred while fetching recipes." : {
+
+    },
+    "Loading Recipes..." : {
+
+    },
+    "No recipes exist." : {
+
+    },
+    "No recipes found matching your search." : {
+
+    },
+    "Try Again" : {
+
+    }
+  },
+  "version" : "1.0"
+}
